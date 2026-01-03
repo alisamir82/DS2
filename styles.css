@@ -56,7 +56,7 @@ a{ color:inherit; }
 }
 .brand{ display:flex; align-items:center; gap: 12px; text-decoration:none; color:inherit; }
 .brand__logo{ height: 34px; width:auto; display:block; }
-
+.brand { position: relative; z-index: 9999; }
 .nav{
   display:flex; gap: 18px;
 }
@@ -579,3 +579,4 @@ a{ color:inherit; }
 
   .footerGrid{ grid-template-columns: 1fr; }
 }
+
