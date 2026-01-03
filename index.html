@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DigitalSelf — Where Content Becomes Experience</title>
+  <meta name="description" content="DigitalSelf — Where Content Becomes Experience" />
+
+  <link rel="preload" href="./styles.css" as="style" />
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Preload hero media (optional; remove if you prefer faster initial HTML) -->
+  <link rel="preload" href="./assets/hero.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="./assets/hero-bg.jpg" as="image" />
+</head>
+
+<body>
+  <!-- Top chrome -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="DigitalSelf home">
+        <img class="brand__logo" src="./assets/logo.svg" alt="DigitalSelf logo" />
+      </a>
+
+      <nav class="nav">
+        <!-- Keep minimal; single page -->
+        <a href="#section-01">Overview</a>
+        <a href="#section-02">Platform</a>
+        <a href="#section-03">Experience</a>
+        <a href="#section-04">Contact</a>
+      </nav>
+
+      <button class="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Scroll progress -->
+  <div class="scrollProgress" aria-hidden="true">
+    <div class="scrollProgress__bar" id="scrollProgressBar"></div>
+  </div>
+
+  <main id="top">
+    <!-- HERO (Pinned feel via parallax layers) -->
+    <section class="section hero" id="hero">
+      <div class="hero__media">
+        <!-- Parallax layers (images) -->
+        <div class="layer layer--bg" data-parallax="0.12" style="background-image:url('./assets/hero-bg.jpg');"></div>
+        <div class="layer layer--depth" data-parallax="0.22" style="background-image:url('./assets/infra-depth.png');"></div>
+        <div class="layer layer--glow" data-parallax="0.32"></div>
+
+        <!-- Hero video (autoplays in view) -->
+        <video
+          class="hero__video js-autoVideo"
+          src="./assets/hero.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+
+        <div class="hero__vignette"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="kicker reveal" data-reveal>
+          <span class="pill">DigitalSelf</span>
+          <span class="dot"></span>
+          <span>Single-page, parallax experience</span>
+        </div>
+
+        <!-- ✅ PASTE/EDIT YOUR EXISTING HERO TEXT HERE (controlled modernisation allowed) -->
+        <h1 class="hero__title reveal" data-reveal>
+          Where Content Becomes Experience
+        </h1>
+
+        <!-- ✅ PASTE/EDIT YOUR EXISTING SUBTEXT HERE -->
+        <p class="hero__subtitle reveal" data-reveal>
+          <!-- Replace with your exact existing paragraph(s) from digitalself.live -->
+          DigitalSelf is a new layer of social entertainment. An immersive platform for live events, social connection, authentic content, and fairer economics.
+        </p>
+
+        <div class="hero__cta reveal" data-reveal>
+          <a class="btn btn--primary" href="#section-01">Explore</a>
+          <a class="btn btn--ghost" href="#section-04">Contact</a>
+        </div>
+
+        <div class="hero__scrollHint" aria-hidden="true">
+          <span class="scrollHint__line"></span>
+          <span class="scrollHint__text">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01 -->
+    <section class="section content" id="section-01">
+      <div class="container">
+        <div class="grid grid--2">
+          <div>
+            <h2 class="reveal" data-reveal>Overview</h2>
+
+            <!-- ✅ PASTE YOUR EXISTING “ABOUT / OVERVIEW” TEXT HERE -->
+            <div class="richText reveal" data-reveal>
+              <p><!-- Paste paragraph 1 from your current site --></p>
+              <p><!-- Paste paragraph 2 --></p>
+            </div>
+
+            <div class="stats reveal" data-reveal>
+              <!-- Optional: keep factual only. Remove if it introduces new claims. -->
+              <div class="stat">
+                <div class="stat__num">01</div>
+                <div class="stat__label">Immersive layer</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num">02</div>
+                <div class="stat__label">Live events</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num">03</div>
+                <div class="stat__label">Fairer economics</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardStack">
+            <div class="cardGlass reveal" data-reveal data-parallax="0.10">
+              <h3>Identity</h3>
+              <p><!-- Paste a short existing line from your site that relates to identity/social presence --></p>
+            </div>
+            <div class="cardGlass reveal" data-reveal data-parallax="0.16">
+              <h3>Connection</h3>
+              <p><!-- Paste an existing line about community/social/live experience --></p>
+            </div>
+            <div class="cardGlass reveal" data-reveal data-parallax="0.22">
+              <h3>Experience</h3>
+              <p><!-- Paste an existing line about immersive content/platform --></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section divider layer -->
+      <div class="dividerImage" style="background-image:url('./assets/divider.jpg');" aria-hidden="true"></div>
+    </section>
+
+    <!-- SECTION 02 (Pinned-style video block) -->
+    <section class="section feature" id="section-02">
+      <div class="feature__media">
+        <div class="layer layer--bg" data-parallax="0.14" style="background-image:url('./assets/signal-bg.jpg');"></div>
+        <div class="layer layer--flow" data-parallax="0.24" style="background-image:url('./assets/flow-layer.png');"></div>
+
+        <video
+          class="feature__video js-autoVideo"
+          src="./assets/mid.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+
+        <div class="feature__vignette"></div>
+      </div>
+
+      <div class="feature__content container">
+        <div class="grid grid--2">
+          <div>
+            <h2 class="reveal" data-reveal>Platform</h2>
+
+            <!-- ✅ PASTE YOUR EXISTING PLATFORM / PRODUCT TEXT HERE -->
+            <div class="richText reveal" data-reveal>
+              <p><!-- Paste paragraph(s) from your current site --></p>
+            </div>
+          </div>
+
+          <div class="list">
+            <!-- ✅ Replace these titles/descriptions ONLY with your existing text snippets -->
+            <div class="listItem reveal" data-reveal>
+              <div class="listItem__icon"></div>
+              <div>
+                <h3><!-- Existing heading or phrase --></h3>
+                <p><!-- Existing supporting line --></p>
+              </div>
+            </div>
+            <div class="listItem reveal" data-reveal>
+              <div class="listItem__icon"></div>
+              <div>
+                <h3><!-- Existing heading or phrase --></h3>
+                <p><!-- Existing supporting line --></p>
+              </div>
+            </div>
+            <div class="listItem reveal" data-reveal>
+              <div class="listItem__icon"></div>
+              <div>
+                <h3><!-- Existing heading or phrase --></h3>
+                <p><!-- Existing supporting line --></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 -->
+    <section class="section content" id="section-03">
+      <div class="container">
+        <div class="grid grid--2">
+          <div>
+            <h2 class="reveal" data-reveal>Experience</h2>
+
+            <!-- ✅ PASTE YOUR EXISTING “EXPERIENCE / HOW IT WORKS” TEXT HERE -->
+            <div class="richText reveal" data-reveal>
+              <p><!-- Paste existing copy --></p>
+              <p><!-- Paste existing copy --></p>
+            </div>
+          </div>
+
+          <div class="tiles">
+            <!-- Keep these as design containers; use your existing text only -->
+            <div class="tile reveal" data-reveal>
+              <h3><!-- Existing heading --></h3>
+              <p><!-- Existing line --></p>
+            </div>
+            <div class="tile reveal" data-reveal>
+              <h3><!-- Existing heading --></h3>
+              <p><!-- Existing line --></p>
+            </div>
+            <div class="tile reveal" data-reveal>
+              <h3><!-- Existing heading --></h3>
+              <p><!-- Existing line --></p>
+            </div>
+            <div class="tile reveal" data-reveal>
+              <h3><!-- Existing heading --></h3>
+              <p><!-- Existing line --></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 (Contact / Footer) -->
+    <section class="section footer" id="section-04">
+      <div class="container">
+        <div class="footer__top">
+          <img class="footer__logo" src="./assets/logo.svg" alt="DigitalSelf logo" />
+
+          <!-- ✅ PASTE YOUR EXISTING CONTACT TEXT / CTA HERE -->
+          <div class="richText">
+            <p><!-- Paste your existing contact line(s) --></p>
+          </div>
+
+          <!-- Lightweight static contact (GoDaddy-friendly) -->
+          <div class="footer__actions">
+            <!-- Replace with your real email if it already exists on your current site -->
+            <a class="btn btn--primary" href="mailto:contact@digitalself.live">Email us</a>
+            <a class="btn btn--ghost" href="#top">Back to top</a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <small>© <span id="year"></span> DigitalSelf. All rights reserved.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
