@@ -64,6 +64,31 @@
     }
     updateProgress();
   }
+  // Hide video blocks if media fails to load (prevents empty spaces)
+  function hideIfMissingMedia(el, fallbackSelector) {
+    if (!el) return;
+
+    el.addEventListener("error", () => {
+      // hide the container if a big video panel fails
+      const panel = el.closest(".videoPanel");
+      if (panel) panel.style.display = "none";
+      // for hero video, just fade it out
+      el.style.opacity = "0";
+    });
+
+    // Some browsers don't fire "error" reliably; check readiness shortly after
+    setTimeout(() => {
+      if (el.readyState === 0 && el.networkState === 3) { // NETWORK_NO_SOURCE
+        const panel = el.closest(".videoPanel");
+        if (panel) panel.style.display = "none";
+        el.style.opacity = "0";
+      }
+    }, 1200);
+  }
+
+  // Apply to your videos
+  hideIfMissingMedia(document.querySelector(".hero__video"));
+  document.querySelectorAll(".panelVideo").forEach(v => hideIfMissingMedia(v));
 
   function updateParallax() {
     const h = window.innerHeight || 1;
@@ -98,3 +123,4 @@
   updateParallax();
   updateProgress();
 })();
+
