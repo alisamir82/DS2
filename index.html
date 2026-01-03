@@ -3,31 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DigitalSelf — Where Content Becomes Experience</title>
-  <meta name="description" content="DigitalSelf — Where Content Becomes Experience" />
-
-  <link rel="preload" href="./styles.css" as="style" />
+  <title>DigitalSelf</title>
+  <meta name="description" content="DigitalSelf — immersive social entertainment, authentic content, and fairer economics for creators worldwide." />
   <link rel="stylesheet" href="./styles.css" />
-
-  <!-- Preload hero media (optional; remove if you prefer faster initial HTML) -->
-  <link rel="preload" href="./assets/hero.mp4" as="video" type="video/mp4" />
-  <link rel="preload" href="./assets/hero-bg.jpg" as="image" />
 </head>
 
 <body>
-  <!-- Top chrome -->
-  <header class="topbar">
+  <!-- Fixed topbar (logo stays in corner) -->
+  <header class="topbar" id="top">
     <div class="topbar__inner">
-      <a class="brand" href="#top" aria-label="DigitalSelf home">
-        <img class="brand__logo" src="./assets/logo.svg" alt="DigitalSelf logo" />
+      <a class="brand" href="#home" aria-label="DigitalSelf home">
+        <img class="brand__logo" src="./assets/digitalself-logo.svg" alt="DigitalSelf logo" />
       </a>
 
-      <nav class="nav">
-        <!-- Keep minimal; single page -->
-        <a href="#section-01">Overview</a>
-        <a href="#section-02">Platform</a>
-        <a href="#section-03">Experience</a>
-        <a href="#section-04">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#platform">The Platform</a>
+        <a href="#production">Production Services</a>
+        <a href="#team">Our Team</a>
       </nav>
 
       <button class="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -41,49 +35,38 @@
     <div class="scrollProgress__bar" id="scrollProgressBar"></div>
   </div>
 
-  <main id="top">
-    <!-- HERO (Pinned feel via parallax layers) -->
-    <section class="section hero" id="hero">
+  <!-- HERO -->
+  <main>
+    <section class="section hero" id="home">
       <div class="hero__media">
-        <!-- Parallax layers (images) -->
-        <div class="layer layer--bg" data-parallax="0.12" style="background-image:url('./assets/hero-bg.jpg');"></div>
-        <div class="layer layer--depth" data-parallax="0.22" style="background-image:url('./assets/infra-depth.png');"></div>
-        <div class="layer layer--glow" data-parallax="0.32"></div>
+        <!-- Background art layers (you generate) -->
+        <div class="layer layer--bg" data-parallax="0.10" style="background-image:url('./assets/hero-bg.jpg');"></div>
+        <div class="layer layer--depth" data-parallax="0.18" style="background-image:url('./assets/infra-depth.png');"></div>
+        <div class="layer layer--glow" data-parallax="0.28"></div>
 
-        <!-- Hero video (autoplays in view) -->
-        <video
-          class="hero__video js-autoVideo"
-          src="./assets/hero.mp4"
-          muted
-          loop
-          playsinline
-          preload="metadata"
-        ></video>
+        <!-- Hero video (you generate/replace) -->
+        <video class="hero__video js-autoVideo"
+          src="./assets/hero.mp4" muted loop playsinline preload="metadata"></video>
 
         <div class="hero__vignette"></div>
       </div>
 
-      <div class="hero__content">
+      <div class="hero__content container">
         <div class="kicker reveal" data-reveal>
           <span class="pill">DigitalSelf</span>
           <span class="dot"></span>
-          <span>Single-page, parallax experience</span>
+          <span>Immersive social entertainment</span>
         </div>
 
-        <!-- ✅ PASTE/EDIT YOUR EXISTING HERO TEXT HERE (controlled modernisation allowed) -->
-        <h1 class="hero__title reveal" data-reveal>
-          Where Content Becomes Experience
-        </h1>
+        <h1 class="hero__title reveal" data-reveal>Empowering a billion lives</h1>
 
-        <!-- ✅ PASTE/EDIT YOUR EXISTING SUBTEXT HERE -->
         <p class="hero__subtitle reveal" data-reveal>
-          <!-- Replace with your exact existing paragraph(s) from digitalself.live -->
-          DigitalSelf is a new layer of social entertainment. An immersive platform for live events, social connection, authentic content, and fairer economics.
+          Empowering a billion lives through immersive social entertainment, authentic content, and fairer economics for creators worldwide.
         </p>
 
         <div class="hero__cta reveal" data-reveal>
-          <a class="btn btn--primary" href="#section-01">Explore</a>
-          <a class="btn btn--ghost" href="#section-04">Contact</a>
+          <a class="btn btn--primary" href="#platform">Explore The Platform</a>
+          <a class="btn btn--ghost" href="#contact">Contact Us</a>
         </div>
 
         <div class="hero__scrollHint" aria-hidden="true">
@@ -93,174 +76,286 @@
       </div>
     </section>
 
-    <!-- SECTION 01 -->
-    <section class="section content" id="section-01">
+    <!-- ABOUT US (light section; uses existing site tone) -->
+    <section class="section content" id="about">
       <div class="container">
-        <div class="grid grid--2">
-          <div>
-            <h2 class="reveal" data-reveal>Overview</h2>
-
-            <!-- ✅ PASTE YOUR EXISTING “ABOUT / OVERVIEW” TEXT HERE -->
-            <div class="richText reveal" data-reveal>
-              <p><!-- Paste paragraph 1 from your current site --></p>
-              <p><!-- Paste paragraph 2 --></p>
-            </div>
-
-            <div class="stats reveal" data-reveal>
-              <!-- Optional: keep factual only. Remove if it introduces new claims. -->
-              <div class="stat">
-                <div class="stat__num">01</div>
-                <div class="stat__label">Immersive layer</div>
-              </div>
-              <div class="stat">
-                <div class="stat__num">02</div>
-                <div class="stat__label">Live events</div>
-              </div>
-              <div class="stat">
-                <div class="stat__num">03</div>
-                <div class="stat__label">Fairer economics</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cardStack">
-            <div class="cardGlass reveal" data-reveal data-parallax="0.10">
-              <h3>Identity</h3>
-              <p><!-- Paste a short existing line from your site that relates to identity/social presence --></p>
-            </div>
-            <div class="cardGlass reveal" data-reveal data-parallax="0.16">
-              <h3>Connection</h3>
-              <p><!-- Paste an existing line about community/social/live experience --></p>
-            </div>
-            <div class="cardGlass reveal" data-reveal data-parallax="0.22">
-              <h3>Experience</h3>
-              <p><!-- Paste an existing line about immersive content/platform --></p>
-            </div>
-          </div>
+        <div class="sectionHeader reveal" data-reveal>
+          <h2>About Us</h2>
+          <p class="lead">
+            DigitalSelf is a social entertainment platform where users can attend live events in sports, music, art, business, and education.
+            It's a space built not just to watch—but to inhabit.
+          </p>
         </div>
-      </div>
 
-      <!-- Section divider layer -->
-      <div class="dividerImage" style="background-image:url('./assets/divider.jpg');" aria-hidden="true"></div>
-    </section>
-
-    <!-- SECTION 02 (Pinned-style video block) -->
-    <section class="section feature" id="section-02">
-      <div class="feature__media">
-        <div class="layer layer--bg" data-parallax="0.14" style="background-image:url('./assets/signal-bg.jpg');"></div>
-        <div class="layer layer--flow" data-parallax="0.24" style="background-image:url('./assets/flow-layer.png');"></div>
-
-        <video
-          class="feature__video js-autoVideo"
-          src="./assets/mid.mp4"
-          muted
-          loop
-          playsinline
-          preload="metadata"
-        ></video>
-
-        <div class="feature__vignette"></div>
-      </div>
-
-      <div class="feature__content container">
-        <div class="grid grid--2">
-          <div>
-            <h2 class="reveal" data-reveal>Platform</h2>
-
-            <!-- ✅ PASTE YOUR EXISTING PLATFORM / PRODUCT TEXT HERE -->
-            <div class="richText reveal" data-reveal>
-              <p><!-- Paste paragraph(s) from your current site --></p>
-            </div>
-          </div>
-
-          <div class="list">
-            <!-- ✅ Replace these titles/descriptions ONLY with your existing text snippets -->
-            <div class="listItem reveal" data-reveal>
-              <div class="listItem__icon"></div>
-              <div>
-                <h3><!-- Existing heading or phrase --></h3>
-                <p><!-- Existing supporting line --></p>
-              </div>
-            </div>
-            <div class="listItem reveal" data-reveal>
-              <div class="listItem__icon"></div>
-              <div>
-                <h3><!-- Existing heading or phrase --></h3>
-                <p><!-- Existing supporting line --></p>
-              </div>
-            </div>
-            <div class="listItem reveal" data-reveal>
-              <div class="listItem__icon"></div>
-              <div>
-                <h3><!-- Existing heading or phrase --></h3>
-                <p><!-- Existing supporting line --></p>
-              </div>
-            </div>
-          </div>
+        <div class="glassSplit reveal" data-reveal>
+          <p>
+            Our platform provides a single profile and home where your content, community, and earnings are all in one place,
+            accessible across all devices: mobile, desktop, and VR headsets.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 03 -->
-    <section class="section content" id="section-03">
+    <!-- THE PLATFORM -->
+    <section class="section platform" id="platform">
       <div class="container">
-        <div class="grid grid--2">
-          <div>
-            <h2 class="reveal" data-reveal>Experience</h2>
+        <div class="platformHeader reveal" data-reveal>
+          <h2 class="gradTitle">The Platform</h2>
+          <p class="platformSub">
+            Part broadcast, part interaction. Half stage half living room. A front row seat with a backstage pass.
+          </p>
+        </div>
 
-            <!-- ✅ PASTE YOUR EXISTING “EXPERIENCE / HOW IT WORKS” TEXT HERE -->
-            <div class="richText reveal" data-reveal>
-              <p><!-- Paste existing copy --></p>
-              <p><!-- Paste existing copy --></p>
-            </div>
+        <div class="grid grid--2 platformTop">
+          <div class="richText reveal" data-reveal>
+            <p><strong>DigitalSelf</strong> is a social entertainment platform where users can attend live events in sports, music, art, business, and education. It's a space built not just to watch—but to inhabit.</p>
+            <p>Our platform provides a single profile and home where your content, community, and earnings are all in one place, accessible across all devices: mobile, desktop, and VR headsets.</p>
           </div>
 
-          <div class="tiles">
-            <!-- Keep these as design containers; use your existing text only -->
-            <div class="tile reveal" data-reveal>
-              <h3><!-- Existing heading --></h3>
-              <p><!-- Existing line --></p>
-            </div>
-            <div class="tile reveal" data-reveal>
-              <h3><!-- Existing heading --></h3>
-              <p><!-- Existing line --></p>
-            </div>
-            <div class="tile reveal" data-reveal>
-              <h3><!-- Existing heading --></h3>
-              <p><!-- Existing line --></p>
-            </div>
-            <div class="tile reveal" data-reveal>
-              <h3><!-- Existing heading --></h3>
-              <p><!-- Existing line --></p>
-            </div>
+          <div class="featureListCard reveal" data-reveal>
+            <ul class="bulletList">
+              <li><span class="bDot"></span>Cross-Platform Unity</li>
+              <li><span class="bDot bDot--purple"></span>Immersive Social Experiences</li>
+              <li><span class="bDot bDot--blue"></span>Authentic Content Verification</li>
+            </ul>
           </div>
         </div>
+
+        <!-- Platform feature tiles -->
+        <div class="cardGrid cardGrid--3">
+          <article class="infoCard reveal" data-reveal>
+            <h3>Live Streaming, Reimagined</h3>
+            <p>It's not just about the main event, but everything around it—the atmosphere and the moments that matter.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Immersive Experiences</h3>
+            <p>Explore 360° video, behind-the-scenes access, multiple viewpoints, and venue tours that invite you in.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Social Layers</h3>
+            <p>Watch together, react in real-time, and be part of a shared experience with others—wherever you are.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Fairer Economics</h3>
+            <p>We provide better revenue splits, transparent tools, and more control and ownership for creators.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Built-in Collaboration</h3>
+            <p>Create together, split earnings, and build shared experiences without middlemen.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Tools for Creators</h3>
+            <p>Run your own channel, share exclusive content, and earn through subscriptions, pay-per-view, and merch.</p>
+          </article>
+        </div>
+
+        <!-- Mid-page video panel (your 2nd video) -->
+        <div class="videoPanel reveal" data-reveal>
+          <video class="panelVideo js-autoVideo" src="./assets/mid.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="panelOverlay"></div>
+        </div>
+
+        <!-- Problem / Solution / Opportunity -->
+        <div class="cardGrid cardGrid--3">
+          <article class="infoCard reveal" data-reveal>
+            <h3 class="centerTitle">The Problem</h3>
+            <ul class="checkList">
+              <li>Online content is scattered and trust is low.</li>
+              <li>Deepfakes and misinformation make it hard to know what's real.</li>
+              <li>Creators and brands struggle to reach engaged audiences in one reliable place.</li>
+            </ul>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3 class="centerTitle">The Solution</h3>
+            <ul class="checkList">
+              <li>DS brings people, creators, and brands together in one immersive space across mobile, VR, and TV.</li>
+              <li>Our Digital Authenticity &amp; Verification System (DAVS) proves every post's origin, protecting creators and building audience trust.</li>
+              <li>Simple tools make it easy to upload, design, and share authentic experiences.</li>
+            </ul>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3 class="centerTitle">The Opportunity</h3>
+            <ul class="checkList">
+              <li>Give fans verified, engaging spaces to explore music, sports, live events, and more.</li>
+              <li>Help creators and brands monetise through ads, subscriptions, pay-per-view, and merchandise.</li>
+              <li>Become the trusted home for authentic social entertainment in the spatial web.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- CTA -->
+        <section class="ctaBand reveal" data-reveal>
+          <h3>Ready to Experience the Future?</h3>
+          <p>Join the revolution in digital entertainment. Be part of building the next generation of social experiences.</p>
+          <a class="btn btn--primary" href="#contact">Contact Us</a>
+        </section>
       </div>
     </section>
 
-    <!-- SECTION 04 (Contact / Footer) -->
-    <section class="section footer" id="section-04">
+    <!-- PRODUCTION SERVICES -->
+    <section class="section production" id="production">
       <div class="container">
-        <div class="footer__top">
-          <img class="footer__logo" src="./assets/logo.svg" alt="DigitalSelf logo" />
+        <div class="sectionHeader reveal" data-reveal>
+          <h2 class="bigTitle">World-Class Production, Globally</h2>
+          <p class="lead">
+            DigitalSelf is your full-service partner for producing and streaming unforgettable events. We are the architects of authentic, immersive experiences.
+          </p>
+        </div>
 
-          <!-- ✅ PASTE YOUR EXISTING CONTACT TEXT / CTA HERE -->
-          <div class="richText">
-            <p><!-- Paste your existing contact line(s) --></p>
+        <div class="glassCols reveal" data-reveal>
+          <div>
+            <p><strong>We offer B2B production</strong> for 2D, traditional broadcast, and 360° immersive streaming. Our world-class production teams across the globe are experts in delivering live music, sports, and cultural moments.</p>
           </div>
-
-          <!-- Lightweight static contact (GoDaddy-friendly) -->
-          <div class="footer__actions">
-            <!-- Replace with your real email if it already exists on your current site -->
-            <a class="btn btn--primary" href="mailto:contact@digitalself.live">Email us</a>
-            <a class="btn btn--ghost" href="#top">Back to top</a>
+          <div>
+            <p><strong>We provide a full-stack solution</strong>, including advanced capture technology, seamless workflows, and interactive fan engagement features to ensure every moment is captured and delivered with stunning quality.</p>
           </div>
         </div>
 
-        <div class="footer__bottom">
-          <small>© <span id="year"></span> DigitalSelf. All rights reserved.</small>
+        <div class="cardGrid cardGrid--3">
+          <article class="infoCard reveal" data-reveal>
+            <h3>2D Traditional Broadcast</h3>
+            <p>Professional live streaming with multi-camera setups and broadcast-quality production.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>360° Immersive Streaming</h3>
+            <p>Full immersive capture technology for VR and spatial experiences.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Advanced Capture Technology</h3>
+            <p>State-of-the-art equipment and seamless workflows for any scale of event.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Interactive Fan Engagement</h3>
+            <p>Real-time features that connect audiences with performers and content.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Global Production Teams</h3>
+            <p>World-class experts in live music, sports, and cultural event production.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Full-Stack Solutions</h3>
+            <p>End-to-end production from concept to delivery across all platforms.</p>
+          </article>
         </div>
+
+        <section class="ctaBand reveal" data-reveal>
+          <h3>Ready to Create Something Extraordinary?</h3>
+          <p>Let's discuss how we can bring your vision to life with our world-class production capabilities.</p>
+          <a class="btn btn--primary" href="#contact">Start Your Project</a>
+        </section>
       </div>
+    </section>
+
+    <!-- OUR TEAM -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="sectionHeader reveal" data-reveal>
+          <h2 class="gradTitle">Diverse Talents, Shared Vision</h2>
+          <p class="lead">
+            Our team brings expertise in media, tech, live events, creativity and culture and a global web of partners and collaborators.
+          </p>
+        </div>
+
+        <div class="glassSplit reveal" data-reveal>
+          <p>
+            <strong>We are a collective of world-class experts</strong> in production, technology, creative, and event promotion, all proven through years of delivering major global events and complex broadcasts. Our diverse expertise in immersive technology, AI, and content creation positions us to lead the next era of digital entertainment.
+          </p>
+        </div>
+
+        <div class="cardGrid cardGrid--2">
+          <article class="infoCard reveal" data-reveal>
+            <h3>Production Excellence</h3>
+            <p>Years of delivering major global events, broadcasts and behind the scenes productions.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Technology Innovation</h3>
+            <p>Deep expertise in immersive technology, AI, and cutting-edge content creation.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Creative Leadership</h3>
+            <p>Visionary artists and creators who understand the future of digital entertainment.</p>
+          </article>
+
+          <article class="infoCard reveal" data-reveal>
+            <h3>Event Promotion</h3>
+            <p>Proven track record in promoting and scaling entertainment experiences globally.</p>
+          </article>
+        </div>
+
+        <!-- What Drives Us -->
+        <div class="whatDrives reveal" data-reveal>
+          <h3 class="whatDrives__title">What Drives Us</h3>
+
+          <div class="cardGrid cardGrid--3">
+            <article class="driveCard">
+              <h4>Innovation First</h4>
+              <p>We push the boundaries of what's possible in digital entertainment.</p>
+            </article>
+            <article class="driveCard">
+              <h4>Authentic Connection</h4>
+              <p>Building genuine relationships between creators and audiences.</p>
+            </article>
+            <article class="driveCard">
+              <h4>Global Impact</h4>
+              <p>Empowering creators worldwide with fair economics and new opportunities.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Join CTA -->
+        <section class="ctaBand reveal" data-reveal id="contact">
+          <h3>Join the Future of Entertainment</h3>
+          <p>
+            Be part of a team that's building the next generation of social entertainment.<br />
+            We're always looking for talented individuals who share our vision.
+          </p>
+          <a class="btn btn--ghost" href="mailto:contact@digitalself.live">Contact Us</a>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer class="siteFooter">
+        <div class="container footerGrid">
+          <div class="footerLeft">
+            <div class="footerBrand">DigitalSelf</div>
+            <p>
+              Empowering a billion lives through immersive social entertainment, authentic content, and fairer economics for creators worldwide.
+            </p>
+          </div>
+
+          <div class="footerLinks">
+            <div class="footerLinks__title">Platform</div>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#platform">The Platform</a>
+            <a href="#production">Production Services</a>
+            <a href="#team">Our Team</a>
+          </div>
+        </div>
+
+        <div class="container footerBottom">
+          <small>© 2026 DigitalSelf. All rights reserved.</small>
+          <div class="footerLegal">
+            <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#" aria-label="Terms of Service">Terms of Service</a>
+            <a href="#" aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
+      </footer>
     </section>
   </main>
 
